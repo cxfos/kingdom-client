@@ -1,0 +1,22 @@
+{
+    "name": "NextJS Client - Boilerplate",
+    "short_name": "NextJS Client",
+    "icons": [
+      {
+        "src": "/img/favicon/next-android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/img/favicon/next-android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#06092b",
+    "background_color": "#06092b",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
