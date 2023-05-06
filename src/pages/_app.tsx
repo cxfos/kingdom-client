@@ -1,14 +1,16 @@
 import {AppProps} from 'next/app';
 import Head from 'next/head';
+import { ThemeProvider } from 'styled-components';
 
 import GlobalStyles from 'styles/global';
+import theme from 'styles/theme';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const appName = 'NextJS Client - Boilerplate'; // TODO - Change to your app Name 
-  const appDescription = 'A simple project starter to work with TypeScript, ReactJS, NextJS and Styled Components'; // TODO - Change to your app description 
+  const appName = 'TKbN - The Kingdom by Night - Teatro da Mente de Vampiro a Máscara';
+  const appDescription = 'Site da crônica The Kingdom by Night do Teatro da Mente de Vampiro a Máscara. Uma crônica oficial do One World by Night.';
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Head>
         <title>{appName}</title>
         <meta name="application-name" content={appName} />
@@ -30,6 +32,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }

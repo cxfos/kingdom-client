@@ -1,7 +1,5 @@
 import {StoryObj, Meta} from '@storybook/react';
-import {withThemeFromJSXProvider} from '@storybook/addon-styling';
 
-import GlobalStyles from 'styles/global';
 import Main from '.';
 
 const meta: Meta<typeof Main> = {
@@ -11,7 +9,6 @@ const meta: Meta<typeof Main> = {
   parameters: {
     layout: 'fullscreen',
   },
-  decorators: [withThemeFromJSXProvider({GlobalStyles})],
 };
 
 export default meta;
