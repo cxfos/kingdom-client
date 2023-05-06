@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {withThemeFromJSXProvider} from '@storybook/addon-styling';
 
-import GlobalStyles from 'styles/global';
 import Home from 'src/pages';
 
 const meta: Meta<typeof Home> = {
@@ -9,8 +7,7 @@ const meta: Meta<typeof Home> = {
   component: Home,
   parameters: {
     layout: 'fullscreen',
-  },
-  decorators: [withThemeFromJSXProvider({GlobalStyles})],
+  }
 };
 
 export default meta;
