@@ -4,7 +4,7 @@ const theme = {
       gutter: '3.2rem'
     },
     border: {
-      radius: '0.4rem'
+      radius: '3rem'
     },
     font: {
       family:
@@ -22,14 +22,20 @@ const theme = {
       }
     },
     colors: {
-      primary: '#63803A',
-      secondary: '#880808',
+      main: '#EAEAEA',
       mainBg: '#0A0A0A',
-      white: '#FAFAFA',
+      primary: '#EAEAEA',
+      primaryBg: '#63803A',
+      secondary: '#7D0F0A',
+      secondaryBg: '#8F8F8F',
       black: '#170303',
+      white: '#FAFAFA',
       lightGray: '#EAEAEA',
       gray: '#8F8F8F',
-      darkGray: '#2E2F42'
+      darkGray: '#2E2F42',
+      lightRed: '#EE3A32',
+      red: '#C41710',
+      darkRed: '#7D0F0A'
     },
     spacings: {
       xxsmall: '0.8rem',

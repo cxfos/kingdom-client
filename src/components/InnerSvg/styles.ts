@@ -1,12 +1,15 @@
 import styled, {ThemeProps, css} from 'styled-components';
 import theme from 'styles/theme';
-import {{{pascalCase name}}Props} from '.';
 
 type Theme = typeof theme;
 interface DefaultTheme extends Theme {}
 
-export const Wrapper = styled.main`
-${({theme}: ThemeProps<DefaultTheme> & ButtonProps) => css`
+export const Wrapper = styled.div`
+    ${({theme}: ThemeProps<DefaultTheme>) => css`
         color: ${theme.colors.main};
+        svg {
+            fill: ${theme.colors.main};
+            stroke: ${theme.colors.mainBg};
+        }
     `};
 `;

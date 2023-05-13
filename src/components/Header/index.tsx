@@ -1,56 +1,58 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import {Button} from 'components/Button';
-import './header.css';
+import Logo from 'components/Logo';
+import * as S from './styles';
+import Link from 'next/link';
 
-type User = {
-  name: string;
+export const Header = () => {
+  const [checked, setChecked] = useState(false);
+
+  return (
+  <S.Header>
+    <S.LogoWrapper>
+      <Link href={'/'}>
+        <Logo 
+        url={'img/TKbN_Logo_2023_SVG.svg'} 
+        alternativeText={'The Kingdom by Night'} 
+        size='large' />
+      </Link>
+    </S.LogoWrapper>
+
+    <S.SideMenuToggle id="side-menu" checked={checked}/>
+    <S.Hamburguer for="side-menu" checked={checked} onClick={() => setChecked(!checked)}>
+      <span></span>
+    </S.Hamburguer>
+
+    <S.NavBar checked={checked}>
+      <S.Menu>
+        <S.MenuItemWithSubMenu>
+          <S.SubMenuButton href='#'>
+            <div className={'SubMenuButton'}>
+              {'Primeiros Passos '}
+              <S.SubMenuArrowUp className={'SubMenuArrowUp'}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
+                </svg>
+              </S.SubMenuArrowUp>
+              <S.SubMenuArrowDown className={'SubMenuArrowDown'}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                </svg>
+              </S.SubMenuArrowDown>
+            </div>
+          </S.SubMenuButton>
+          <S.SubMenuContent className={'SubMenuContent'}>
+              <Link href="#">O que é RPG?</Link>
+              <Link href="#">RPG de mesa e Live action (LARP)</Link>
+              <Link href="#">O que é Vampiro - A Máscara?</Link>
+          </S.SubMenuContent>
+        </S.MenuItemWithSubMenu>
+        <S.MenuItem><Link href="#">Vampiro</Link> </S.MenuItem>
+        <S.MenuItem><Link href="#">O Kingdom</Link></S.MenuItem>
+        <S.MenuItem><Link href="#">Galeria</Link></S.MenuItem>
+        <S.MenuItem><Link href="#">Calendário</Link></S.MenuItem>
+      </S.Menu>
+    </S.NavBar>
+  </S.Header>
+  );
 };
-
-interface HeaderProps {
-  user?: User;
-  onLogin: () => void;
-  onLogout: () => void;
-  onCreateAccount: () => void;
-}
-
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
-  <header>
-    <div className="wrapper">
-      <div>
-        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fillRule="evenodd">
-            <path
-              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-              fill="#FFF"
-            />
-            <path
-              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-              fill="#555AB9"
-            />
-            <path
-              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-              fill="#91BAF8"
-            />
-          </g>
-        </svg>
-        <h1>Acme</h1>
-      </div>
-      <div>
-        {user ? (
-          <>
-            <span className="welcome">
-              Welcome, <b>{user.name}</b>!
-            </span>
-            <Button size="small" onClick={onLogout} label="Log out" />
-          </>
-        ) : (
-          <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
-          </>
-        )}
-      </div>
-    </div>
-  </header>
-);
