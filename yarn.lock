@@ -2380,10 +2380,10 @@
   resolved "https://registry.yarnpkg.com/@storybook/manager/-/manager-7.0.9.tgz#7bc1e8d38f719365c3523cb39341e2ced6275070"
   integrity sha512-fyUb9DhTCnWBxjVQR0oTnXPStyIZh4DhQ1oXKEYKtV6ZeS+Qw4yXRDgciVXv6ifIBAdSEZOJ0o869c6NUt0iVQ==
 
-"@storybook/mdx2-csf@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@storybook/mdx2-csf/-/mdx2-csf-1.0.0.tgz#ce4b2e44c9082bf382db835eef611b0097b7d771"
-  integrity sha512-dBAnEL4HfxxJmv7LdEYUoZlQbWj9APZNIbOaq0tgF8XkxiIbzqvgB0jhL/9UOrysSDbQWBiCRTu2wOVxedGfmw==
+"@storybook/mdx2-csf@^1.0.0", "@storybook/mdx2-csf@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@storybook/mdx2-csf/-/mdx2-csf-1.1.0.tgz#97f6df04d0bf616991cc1005a073ac004a7281e5"
+  integrity sha512-TXJJd5RAKakWx4BtpwvSNdgTDkKM6RkXU8GK34S/LhidQ5Pjz3wcnqb0TxEkfhK/ztbP8nKHqXFwLfa2CYkvQw==
 
 "@storybook/nextjs@^7.0.9":
   version "7.0.9"
