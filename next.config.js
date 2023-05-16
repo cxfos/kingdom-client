@@ -26,12 +26,23 @@ const nextConfig = {
       components: path.resolve(__dirname, 'src/components'),
       pages: path.resolve(__dirname, 'src/pages'),
       styles: path.resolve(__dirname, 'src/styles'),
+      utils: path.resolve(__dirname, 'src/utils'),
       src: path.resolve(__dirname, 'src'),
       public: path.resolve(__dirname, 'public'),
       root: path.resolve(__dirname)
     };
 
     return config;
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '1337',
+        pathname: '/uploads/**',
+      },
+    ],
   },
 };
 

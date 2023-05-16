@@ -1,12 +1,12 @@
 import styled, {ThemeProps, css} from 'styled-components';
 import theme from 'styles/theme';
-import {{{pascalCase name}}Props} from '.';
+import { {{pascalCase name}}Props } from '.';
 
 type Theme = typeof theme;
 interface DefaultTheme extends Theme {}
 
 export const Wrapper = styled.main`
-${({theme}: ThemeProps<DefaultTheme> & ButtonProps) => css`
+${({theme}: ThemeProps<DefaultTheme> & {{pascalCase name}}Props) => css`
         color: ${theme.colors.main};
     `};
 `;

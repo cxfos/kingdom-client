@@ -15,8 +15,9 @@ export type HamburguerProps = {
 
 export const Header = styled.header`
     ${({theme}: ThemeProps<DefaultTheme>) => css`
-        background-color: linear-gradient(180deg, ${theme.colors.mainBg}, transparent);
+        background-color: ${theme.colors.mainBg};
         position: sticky;
+        z-index: ${theme.layers.menu};
         top: 0;
         width: 100%;
         a {
