@@ -47,7 +47,7 @@
     "@storybook/addon-styling": "^1.0.5",
     "@storybook/blocks": "^7.0.9",
     "@storybook/mdx2-csf": "^1.0.0",
-    "@storybook/nextjs": "^7.0.9",
+    "@storybook/nextjs": "^7.0.20",
     "@storybook/react": "^7.0.9",
     "@storybook/testing-library": "^0.1.0",
     "@testing-library/jest-dom": "^5.16.5",
